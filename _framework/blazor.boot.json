@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "GameBoard",
   "resources": {
-    "hash": "sha256-akmOTynfifW2+wA2E9EkejHdFP+O2n/cddu6gNxcIqg=",
+    "hash": "sha256-/Iw47Wqcsc59BF5Sl6p+x0K4SW87HabcsCN7DsbueXU=",
     "fingerprinting": {
       "LumexUI.Shared.Icons.9bw7iytaez.wasm": "LumexUI.Shared.Icons.wasm",
       "LumexUI.i1jgzja9nu.wasm": "LumexUI.wasm",
@@ -51,7 +51,7 @@
       "System.m0fu6d0eya.wasm": "System.wasm",
       "netstandard.287yvyt5o3.wasm": "netstandard.wasm",
       "System.Private.CoreLib.k31l0u1384.wasm": "System.Private.CoreLib.wasm",
-      "GameBoard.4sk6mssdex.wasm": "GameBoard.wasm",
+      "GameBoard.7yw43o4i5f.wasm": "GameBoard.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.9ih887ebfz.js": "dotnet.native.js",
       "dotnet.native.21mns4qp4i.wasm": "dotnet.native.wasm",
@@ -125,7 +125,7 @@
       "System.Text.RegularExpressions.67c4mjydun.wasm": "sha256-wni0uFNsdVVOgIPwJahAVKzlcIHBl5bI56cOWZ6pKpQ=",
       "System.m0fu6d0eya.wasm": "sha256-hkGLo/MuT/FJ0Xf4XUL0D2VA4dZV532GHNB1JicxLko=",
       "netstandard.287yvyt5o3.wasm": "sha256-ErCsZumQzQVUGsA4arYzZXGZ0Dd5q5f4jcoGigZQZ24=",
-      "GameBoard.4sk6mssdex.wasm": "sha256-TIss1rthIgX4dW1XoIrYYl0mX1RB5Corl3UQp3rb1Es="
+      "GameBoard.7yw43o4i5f.wasm": "sha256-z4IdxcNPcRMQ8hC+W1AOaymneYq7wfMAbK0q56Uyo/I="
     }
   },
   "cacheBootResources": true,
