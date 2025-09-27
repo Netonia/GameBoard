@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameBoard - Plateforme de gestion de jeux vidéo</title>
+    <base href="/" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="_content/LumexUI/lumexui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="GameBoard.styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="text-center">
+                <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
+                <p class="mt-4 text-lg text-gray-600">Chargement de GameBoard...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui" class="bg-red-600 text-white p-4 text-center">
+        Une erreur s'est produite.
+        <a href="." class="reload underline ml-2">Recharger</a>
+        <span class="dismiss cursor-pointer ml-2">🗙</span>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_content/LumexUI/lumexui.min.js"></script>
+</body>
+
+</html>

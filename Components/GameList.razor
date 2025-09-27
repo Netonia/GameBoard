@@ -1,0 +1,177 @@
+@using LumexUI
+@inject GameService GameService
+
+<div class="container mx-auto px-4">
+    <!-- Search and Filters -->
+    <SearchBar Platforms="@_platforms" 
+               Genres="@_genres" 
+               OnFiltersChanged="OnFiltersChanged" />
+    
+    <!-- View Toggle -->
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Jeux (@_filteredGames.Count)</h2>
+        <div class="flex space-x-2">
+            <button @onclick="() => SetViewMode(ViewMode.Cards)"
+                    class="@(_viewMode == ViewMode.Cards ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-700") px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                </svg>
+                Cartes
+            </button>
+            <button @onclick="() => SetViewMode(ViewMode.Table)"
+                    class="@(_viewMode == ViewMode.Table ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-700") px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                Tableau
+            </button>
+        </div>
+    </div>
+    
+    <!-- Content -->
+    @if (_loading)
+    {
+        <div class="flex justify-center items-center h-64">
+            <div class="text-lg">Chargement...</div>
+        </div>
+    }
+    else if (_filteredGames.Count == 0)
+    {
+        <div class="text-center py-12">
+            <svg class="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-1.007-5.824-2.448M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <h3 class="text-lg font-medium text-gray-900 mb-2">Aucun jeu trouvé</h3>
+            <p class="text-gray-500">Essayez de modifier vos critères de recherche.</p>
+        </div>
+    }
+    else if (_viewMode == ViewMode.Cards)
+    {
+        <!-- Cards View -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            @foreach (var game in _filteredGames)
+            {
+                <GameCard Game="@game" OnFavoriteToggled="OnFavoriteToggled" />
+            }
+        </div>
+    }
+    else
+    {
+        <!-- Table View -->
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Titre</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Plateforme</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Genre</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Note</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Favoris</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    @foreach (var game in _filteredGames)
+                    {
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex items-center space-x-3">
+                                    <img src="@game.ImageUrl" alt="@game.Title" class="w-12 h-16 object-cover rounded" />
+                                    <div>
+                                        <div class="font-medium text-gray-900">@game.Title</div>
+                                        <div class="text-sm text-gray-500">@game.Description</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">@game.Platform</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
+                                    @game.Genre
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">@game.ReleaseDate.ToString("MMM yyyy")</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-yellow-400 fill-current mr-1" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <span class="text-sm text-gray-900">@game.Rating.ToString("F1")</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <button @onclick="() => OnFavoriteToggled(game)" class="text-red-500 hover:text-red-700">
+                                    @if (game.IsFavorite)
+                                    {
+                                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                        </svg>
+                                    }
+                                    else
+                                    {
+                                        <svg class="w-5 h-5 stroke-current fill-none" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                        </svg>
+                                    }
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+@code {
+    private List<Game> _filteredGames = new();
+    private List<string> _platforms = new();
+    private List<string> _genres = new();
+    private bool _loading = true;
+    private ViewMode _viewMode = ViewMode.Cards;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        _loading = true;
+        var games = await GameService.GetGamesAsync();
+        _filteredGames = games;
+        _platforms = await GameService.GetPlatformsAsync();
+        _genres = await GameService.GetGenresAsync();
+        _loading = false;
+        StateHasChanged();
+    }
+
+    private async Task OnFiltersChanged(FilterCriteria criteria)
+    {
+        var games = await GameService.GetFilteredGamesAsync(
+            criteria.SearchTerm,
+            criteria.Platform,
+            criteria.Genre,
+            criteria.MinRating);
+
+        _filteredGames = GameService.SortGames(games, criteria.SortBy, criteria.SortAscending);
+        StateHasChanged();
+    }
+
+    private async Task OnFavoriteToggled(Game game)
+    {
+        await GameService.ToggleFavoriteAsync(game.Id);
+        StateHasChanged();
+    }
+
+    private void SetViewMode(ViewMode viewMode)
+    {
+        _viewMode = viewMode;
+        StateHasChanged();
+    }
+
+    public enum ViewMode
+    {
+        Cards,
+        Table
+    }
+}

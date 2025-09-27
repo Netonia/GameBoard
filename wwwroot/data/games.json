@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "platform": "Nintendo Switch",
+    "genre": "Action-Adventure",
+    "releaseDate": "2017-03-03T00:00:00",
+    "rating": 9.5,
+    "description": "Un jeu d'aventure en monde ouvert révolutionnaire.",
+    "imageUrl": "https://via.placeholder.com/300x400?text=Zelda+BOTW",
+    "isFavorite": false
+  },
+  {
+    "id": 2,
+    "title": "Cyberpunk 2077",
+    "platform": "PC",
+    "genre": "RPG",
+    "releaseDate": "2020-12-10T00:00:00",
+    "rating": 7.8,
+    "description": "Un RPG futuriste dans Night City.",
+    "imageUrl": "https://via.placeholder.com/300x400?text=Cyberpunk+2077",
+    "isFavorite": false
+  },
+  {
+    "id": 3,
+    "title": "God of War",
+    "platform": "PlayStation 5",
+    "genre": "Action",
+    "releaseDate": "2018-04-20T00:00:00",
+    "rating": 9.2,
+    "description": "Kratos et Atreus dans la mythologie nordique.",
+    "imageUrl": "https://via.placeholder.com/300x400?text=God+of+War",
+    "isFavorite": true
+  },
+  {
+    "id": 4,
+    "title": "Halo Infinite",
+    "platform": "Xbox Series X",
+    "genre": "FPS",
+    "releaseDate": "2021-12-08T00:00:00",
+    "rating": 8.5,
+    "description": "Le retour du Master Chief.",
+    "imageUrl": "https://via.placeholder.com/300x400?text=Halo+Infinite",
+    "isFavorite": false
+  },
+  {
+    "id": 5,
+    "title": "Elden Ring",
+    "platform": "PC",
+    "genre": "RPG",
+    "releaseDate": "2022-02-25T00:00:00",
+    "rating": 9.4,
+    "description": "Un souls-like en monde ouvert par FromSoftware.",
+    "imageUrl": "https://via.placeholder.com/300x400?text=Elden+Ring",
+    "isFavorite": true
+  },
+  {
+    "id": 6,
+    "title": "Super Mario Odyssey",
+    "platform": "Nintendo Switch",
+    "genre": "Plateforme",
+    "releaseDate": "2017-10-27T00:00:00",
+    "rating": 9.1,
+    "description": "Mario explore de nouveaux royaumes avec Cappy.",
+    "imageUrl": "https://via.placeholder.com/300x400?text=Mario+Odyssey",
+    "isFavorite": false
+  },
+  {
+    "id": 7,
+    "title": "Horizon Forbidden West",
+    "platform": "PlayStation 5",
+    "genre": "Action-Adventure",
+    "releaseDate": "2022-02-18T00:00:00",
+    "rating": 8.9,
+    "description": "Aloy continue son aventure post-apocalyptique.",
+    "imageUrl": "https://via.placeholder.com/300x400?text=Horizon+FW",
+    "isFavorite": false
+  },
+  {
+    "id": 8,
+    "title": "Forza Horizon 5",
+    "platform": "Xbox Series X",
+    "genre": "Course",
+    "releaseDate": "2021-11-09T00:00:00",
+    "rating": 8.7,
+    "description": "Course en monde ouvert au Mexique.",
+    "imageUrl": "https://via.placeholder.com/300x400?text=Forza+H5",
+    "isFavorite": false
+  },
+  {
+    "id": 9,
+    "title": "Animal Crossing: New Horizons",
+    "platform": "Nintendo Switch",
+    "genre": "Simulation",
+    "releaseDate": "2020-03-20T00:00:00",
+    "rating": 8.3,
+    "description": "Créez votre île paradisiaque.",
+    "imageUrl": "https://via.placeholder.com/300x400?text=Animal+Crossing",
+    "isFavorite": true
+  },
+  {
+    "id": 10,
+    "title": "Call of Duty: Modern Warfare II",
+    "platform": "PC",
+    "genre": "FPS",
+    "releaseDate": "2022-10-28T00:00:00",
+    "rating": 8.1,
+    "description": "Le retour de la Task Force 141.",
+    "imageUrl": "https://via.placeholder.com/300x400?text=COD+MW2",
+    "isFavorite": false
+  },
+  {
+    "id": 11,
+    "title": "The Last of Us Part I",
+    "platform": "PlayStation 5",
+    "genre": "Action-Adventure",
+    "releaseDate": "2022-09-02T00:00:00",
+    "rating": 9.3,
+    "description": "Le chef-d'œuvre de Naughty Dog remasterisé.",
+    "imageUrl": "https://via.placeholder.com/300x400?text=TLOU+Part+I",
+    "isFavorite": false
+  },
+  {
+    "id": 12,
+    "title": "Gran Turismo 7",
+    "platform": "PlayStation 5",
+    "genre": "Course",
+    "releaseDate": "2022-03-04T00:00:00",
+    "rating": 8.4,
+    "description": "La simulation de course par excellence.",
+    "imageUrl": "https://via.placeholder.com/300x400?text=Gran+Turismo+7",
+    "isFavorite": false
+  }
+]
