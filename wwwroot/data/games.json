@@ -7,7 +7,7 @@
     "releaseDate": "2017-03-03T00:00:00",
     "rating": 9.5,
     "description": "Un jeu d'aventure en monde ouvert révolutionnaire.",
-    "imageUrl": "https://via.placeholder.com/300x400?text=Zelda+BOTW",
+    "imageUrl": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58",
     "isFavorite": false
   },
   {
@@ -18,7 +18,7 @@
     "releaseDate": "2020-12-10T00:00:00",
     "rating": 7.8,
     "description": "Un RPG futuriste dans Night City.",
-    "imageUrl": "https://via.placeholder.com/300x400?text=Cyberpunk+2077",
+    "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg",
     "isFavorite": false
   },
   {
@@ -29,7 +29,7 @@
     "releaseDate": "2018-04-20T00:00:00",
     "rating": 9.2,
     "description": "Kratos et Atreus dans la mythologie nordique.",
-    "imageUrl": "https://via.placeholder.com/300x400?text=God+of+War",
+    "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/header.jpg",
     "isFavorite": true
   },
   {
@@ -40,7 +40,7 @@
     "releaseDate": "2021-12-08T00:00:00",
     "rating": 8.5,
     "description": "Le retour du Master Chief.",
-    "imageUrl": "https://via.placeholder.com/300x400?text=Halo+Infinite",
+    "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1240440/header.jpg",
     "isFavorite": false
   },
   {
@@ -51,7 +51,7 @@
     "releaseDate": "2022-02-25T00:00:00",
     "rating": 9.4,
     "description": "Un souls-like en monde ouvert par FromSoftware.",
-    "imageUrl": "https://via.placeholder.com/300x400?text=Elden+Ring",
+    "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg",
     "isFavorite": true
   },
   {
@@ -62,7 +62,7 @@
     "releaseDate": "2017-10-27T00:00:00",
     "rating": 9.1,
     "description": "Mario explore de nouveaux royaumes avec Cappy.",
-    "imageUrl": "https://via.placeholder.com/300x400?text=Mario+Odyssey",
+    "imageUrl": "https://picsum.photos/300/400?random=6",
     "isFavorite": false
   },
   {
@@ -73,7 +73,7 @@
     "releaseDate": "2022-02-18T00:00:00",
     "rating": 8.9,
     "description": "Aloy continue son aventure post-apocalyptique.",
-    "imageUrl": "https://via.placeholder.com/300x400?text=Horizon+FW",
+    "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2420110/header.jpg",
     "isFavorite": false
   },
   {
@@ -84,7 +84,7 @@
     "releaseDate": "2021-11-09T00:00:00",
     "rating": 8.7,
     "description": "Course en monde ouvert au Mexique.",
-    "imageUrl": "https://via.placeholder.com/300x400?text=Forza+H5",
+    "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1551360/header.jpg",
     "isFavorite": false
   },
   {
@@ -95,7 +95,7 @@
     "releaseDate": "2020-03-20T00:00:00",
     "rating": 8.3,
     "description": "Créez votre île paradisiaque.",
-    "imageUrl": "https://via.placeholder.com/300x400?text=Animal+Crossing",
+    "imageUrl": "https://picsum.photos/300/400?random=9",
     "isFavorite": true
   },
   {
@@ -106,7 +106,7 @@
     "releaseDate": "2022-10-28T00:00:00",
     "rating": 8.1,
     "description": "Le retour de la Task Force 141.",
-    "imageUrl": "https://via.placeholder.com/300x400?text=COD+MW2",
+    "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg",
     "isFavorite": false
   },
   {
@@ -117,7 +117,7 @@
     "releaseDate": "2022-09-02T00:00:00",
     "rating": 9.3,
     "description": "Le chef-d'œuvre de Naughty Dog remasterisé.",
-    "imageUrl": "https://via.placeholder.com/300x400?text=TLOU+Part+I",
+    "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/header.jpg",
     "isFavorite": false
   },
   {
@@ -128,7 +128,7 @@
     "releaseDate": "2022-03-04T00:00:00",
     "rating": 8.4,
     "description": "La simulation de course par excellence.",
-    "imageUrl": "https://via.placeholder.com/300x400?text=Gran+Turismo+7",
+    "imageUrl": "https://picsum.photos/300/400?random=12",
     "isFavorite": false
   }
 ]
