@@ -1,0 +1,22 @@
+﻿@page "/"
+
+<PageTitle>GameBoard - Accueil</PageTitle>
+
+<div class="min-h-screen bg-gray-50">
+    <!-- Dashboard -->
+    <GameDashboard FilteredGames="@_filteredGames" />
+    
+    <!-- Game List -->
+    <GameList @ref="_gameListRef" />
+</div>
+
+@code {
+    private GameList? _gameListRef;
+    private List<Game>? _filteredGames;
+
+    protected override void OnInitialized()
+    {
+        // Dashboard will show stats for all games initially
+        _filteredGames = null;
+    }
+}
